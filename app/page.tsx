@@ -4,25 +4,28 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-black">
-      {/* Hero Banner: Imagen del Congreso */}
-      <section className="relative h-[90vh] w-full overflow-hidden">
+      {/* Sección Hero Depurada */}
+      <section className="relative h-[90vh] w-full overflow-hidden mb-8">
         <Image 
-          src="/background_principal.png" 
+          src="/Congreso_final.jpg" 
           alt="Congreso Shekinah" 
           fill
           priority
-          className="object-cover transition-transform duration-1000 hover:scale-105"
+          className="object-cover object-center"
+          style={{ objectPosition: 'center top' }}
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-center space-y-6">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg animate-fadeIn">
-            Congreso Shekinah 2025
-          </h1>
-          <p className="text-lg md:text-2xl text-gray-300 animate-fadeIn delay-200">
-            Renueva tu fe, transforma tu vida
+      </section>
+      
+      {/* Sección de Registro */}
+      <section className="py-8 bg-black text-center">
+        <div className="max-w-4xl mx-auto space-y-4">
+          <h1 className="text-4xl font-bold text-white">Congreso Shekinah 2025</h1>
+          <p className="text-lg text-gray-300">
+            Regístrate antes del 20 de marzo de 2025
           </p>
           <Link 
             href="/register"
-            className="px-8 py-3 bg-[#8c1c13] text-white rounded-full font-semibold transition-all transform hover:scale-105 animate-fadeIn delay-400"
+            className="inline-block px-8 py-3 bg-[#8c1c13] text-white rounded-full font-semibold transition-all transform hover:scale-105"
           >
             Regístrate Ahora
           </Link>
@@ -83,8 +86,8 @@ export default function Home() {
         </div>
       </section>
       
-{/* Sección de Mapa */}
-<section className="py-16 px-4 bg-black">
+      {/* Sección de Mapa */}
+      <section className="py-16 px-4 bg-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl text-white font-bold animate-fadeIn">
             Ubicación
